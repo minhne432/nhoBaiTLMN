@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+    <script>
+    
+
+
+    
+
+
+    let loaiBai = [
+    'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9', 'a0', 'aj', 'aq', 'ak', 'a1', 'a2',
+    'b3', 'b4', 'b5', 'b6', 'b7', 'b8', 'b9', 'b0', 'bj', 'bq', 'bk', 'b1', 'b2',
+    'c3', 'c4', 'c5', 'c6', 'c7', 'c8', 'c9', 'c0', 'cj', 'cq', 'ck', 'c1', 'c2',
+    'd3', 'd4', 'd5', 'd6', 'd7', 'd8', 'd9', 'd0', 'dj', 'dq', 'dk', 'd1', 'd2'
+    ];
+
+        function laBai(giaTri, trangThai) {
+        this.giaTri = giaTri;
+        this.trangThai = trangThai;
+        }
+
+// Khai báo mảng boBai và gán giá trị cho phần tử
+    let boBai = [];
+
+    for (let i = 0; i < 52; i++) {
+    let giaTri = i % 13 + 1;
+    let trangThai = false;
+    if (i < 52) {
+    giaTri = loaiBai[i];
+    trangThai = true;
+    }
+    boBai.push(new laBai(giaTri, trangThai));
+    }
+
+    for (let i = 0; i < 52; i++) {
+    console.log(boBai[i].giaTri);
+    console.log(boBai[i].trangThai);
+    
+    }
+
+    </script>
+</head>
+<body>
+ 
+
+
+
+
+    <table>
+  <tbody>
+    <tr >
+      
+      <td id="a2" >2</td>
+      <td id="b2">2</td>
+      <td id="c2" >2</td>
+      <td id="d2">2</td>
+      <td class="sl">1</td>
+    </tr>
+    <tr>
+     
+      <td id="a1">A</td>
+      <td id="b1">A</td>
+      <td id="c1">A</td>
+      <td id="d1">A</td>
+      <td class="sl">2</td>
+    </tr>
+    <tr>
+     
+      <td  id="ak">K</td>
+      <td id="bk">K</td>
+      <td id="ck">K</td>
+      <td id="dk">K</td>
+      <td class="sl">3</td>
+    </tr>
+    <tr>
+     
+      <td id="aq">Q</td>
+      <td id="bq">Q</td>
+      <td id="cq">Q</td>
+      <td id="dq">Q</td>
+      <td class="sl">4</td>
+    </tr>
+    <tr>
+      
+      <td id="aj">J</td>
+      <td id="bj">J</td>
+      <td id="cj">J</td>
+      <td id="dj">J</td>
+      <td class="sl">5</td>
+    </tr>
+    <tr>
+      
+      <td id="a0">10</td>
+      <td id="b0">10</td>
+      <td id="c0">10</td>
+      <td id="d0">10</td>
+      <td class="sl">6</td>
+    </tr>
+    <tr>
+      
+      <td id="a9">9</td>
+      <td id="b9">9</td>
+      <td id="c9">9</td>
+      <td id="d9">9</td>
+      <td class="sl">7</td>
+    </tr>
+    <tr>
+      
+      <td id="a8">8</td>
+      <td id="b8">8</td>
+      <td id="c8">8</td>
+      <td id="d8">8</td>
+      <td class="sl">8</td>
+    </tr>
+    <tr>
+      
+      <td id="a7">7</td>
+      <td id="b7">7</td>
+      <td id="c7">7</td>
+      <td id="d7">7</td>
+      <td class="sl">9</td>
+    </tr>
+    <tr>
+      
+      <td id="a6">6</td>
+      <td id="b6">6</td>
+      <td id="c6">6</td>
+      <td id="d6">6</td>
+      <td class="sl">10</td>
+    </tr>
+    <tr>
+    
+      <td id="a5">5</td>
+      <td id="b5">5</td>
+      <td id="c5">5</td>
+      <td id="d5">5</td>
+      <td class="sl">11</td>
+    </tr>
+    <tr>
+      
+      <td id="a4">4</td>
+      <td id="b4">4</td>
+      <td id="c4">4</td>
+      <td id="d4">4</td>
+      <td class="sl">12</td>
+    </tr>
+    <tr>
+      
+      <td id="a3">3</td>
+      <td id="b3">3</td>
+      <td id="c3">3</td>
+      <td id="d3">3</td>
+      <td class="sl">13</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<!-- nhap la rac -->
+<form id="myForm">
+    <label for="input-text"></label>
+    <input type="text" id="input-text" name="input-text" value="" required>
+  
+    <button type="submit" id="btn1">Gửi</button>
+  </form>
+
+  <!-- nhap doi -->
+  <form id="myForm2">
+    <label for="input-text2"></label>
+    <input type="text" id="input-text2" name="input-text" value="" required>
+  
+    <button type="submit">Gửi</button>
+  </form>
+
+  
+   <!-- nhap sanh -->
+   <form id="myForm3">
+    <label for="input-text3"></label>
+    <input type="text" id="input-text3" name="input-text" value="" required>
+  
+    <button type="submit">Gửi</button>
+  </form>
+  
+
+  <!-- nhap bai cua minh -->
+  <form id="myForm4">
+    <label for="input-text4"></label>
+    <input type="text" id="input-text4" name="input-text" value="" required>
+  
+    <button type="submit">Gửi</button>
+  </form>
+  <button id="refreshBtn" onclick="location.reload();">Refresh</button>
+
+
+  <script>
+// tinh rac
+let myForm = document.getElementById("myForm");
+  
+  myForm.addEventListener("submit", function(event) {
+    event.preventDefault(); // Ngăn chặn hành động mặc định của form khi được gửi đi
+  
+    let myInputValue = document.getElementById("input-text").value;
+    document.getElementById('input-text').value="";
+    
+        for(let j =0; j< myInputValue.length; j++){
+            for (let i = 0; i < boBai.length; i++) {
+
+                if (boBai[i].giaTri[1] === myInputValue[j]) {
+
+                console.log("Giá trị", myInputValue, "được tìm thấy trong mảng boBai.");
+                if((boBai[i].trangThai)){
+                let element = document.getElementById(boBai[i].giaTri);
+                element.className = "a";
+                boBai[i].trangThai = false;
+                break;
+                }else{
+                continue;
+        }}}}});
+  
+
+//tinh doi
+        let myForm2 = document.getElementById("myForm2");
+  
+  myForm2.addEventListener("submit", function(event) {
+    event.preventDefault(); // Ngăn chặn hành động mặc định của form khi được gửi đi
+  
+    let myInputValue2 = document.getElementById("input-text2").value;
+    document.getElementById('input-text2').value="";
+   
+        for(let j =0; j< myInputValue2.length; j++){
+            for (let i = 0; i < boBai.length; i++) {
+              if (boBai[i].giaTri[1] == myInputValue2[j])
+      
+
+                 {
+
+                console.log("Giá trị", myInputValue2, "được tìm thấy trong mảng boBai.");
+                if((boBai[i].trangThai)){
+                let element2 = document.getElementById(boBai[i].giaTri);
+                let element2s = document.getElementById(boBai[i+13].giaTri);
+                element2.className = "a";
+                element2s.className = "a";
+                boBai[i].trangThai = false;
+                boBai[i+13].trangThai = false;
+                break;
+                }else{
+                continue;
+        }}}}});
+
+//tinh sanh
+
+  let myForm3 = document.getElementById("myForm3");
+  
+  myForm3.addEventListener("submit", function(event) {
+    event.preventDefault(); // Ngăn chặn hành động mặc định của form khi được gửi đi
+  
+    let myInputValue3 = document.getElementById("input-text3").value;
+    
+    let mangMoi = myInputValue3.match(/.{1,2}/g);
+
+    
+    for(let i = 0; i<mangMoi.length; i++){
+        
+
+        //sanh toi at
+            if(mangMoi[i][1]=='1'){
+              
+                let temp = document.getElementById('input-text').value;
+                document.getElementById('input-text').value = "0jqk1";
+                document.getElementById('btn1').click();
+                document.getElementById('input-text').value=temp;
+                document.getElementById('input-text3').value="";
+                let cayDau = mangMoi[i][0];
+            while((cayDau<=9) && cayDau!='0' ){
+                for (let j = 0; j < boBai.length; j++){
+
+            if (boBai[j].giaTri[1] == cayDau.toString()){
+
+
+                
+                if((boBai[j].trangThai)){
+                console.log("Giá trị", cayDau, "được tìm thấy trong mảng boBai.");
+                let element3 = document.getElementById(boBai[j].giaTri);
+                element3.className = "a";
+                boBai[j].trangThai = false;
+                cayDau = (parseInt(cayDau)+1).toString();
+                
+                break;
+                }else{
+                continue;
+                }
+              }}}} 
+              else{
+
+                if(mangMoi[i][1]=='k'){
+                let temp = document.getElementById('input-text').value;
+                document.getElementById('input-text').value = "0jqk";
+                document.getElementById('btn1').click();
+                document.getElementById('input-text').value=temp;
+                document.getElementById('input-text3').value="";
+                let cayDau = mangMoi[i][0];
+            while(cayDau<=9 && cayDau!='0'){
+                for (let j = 0; j < boBai.length; j++){
+
+            if (boBai[j].giaTri[1] == cayDau.toString()){
+
+
+                console.log("Giá trị", cayDau, "được tìm thấy trong mảng boBai.");
+                if((boBai[j].trangThai)){
+                let element3 = document.getElementById(boBai[j].giaTri);
+                element3.className = "a";
+                boBai[j].trangThai = false;
+                cayDau = parseInt(cayDau)+1;
+                cayDau = cayDau.toString();
+                break;
+                }else{
+                continue;
+                }
+              }}}}else{
+
+
+                if(mangMoi[i][1]=='q'){
+                let temp = document.getElementById('input-text').value;
+                document.getElementById('input-text').value = "0jq";
+                document.getElementById('btn1').click();
+                document.getElementById('input-text').value=temp;
+                document.getElementById('input-text3').value="";
+                let cayDau = mangMoi[i][0];
+            while(cayDau<=9 && cayDau!='0'){
+                for (let j = 0; j < boBai.length; j++){
+
+            if (boBai[j].giaTri[1] == cayDau.toString()){
+
+
+                console.log("Giá trị", cayDau, "được tìm thấy trong mảng boBai.");
+                if((boBai[j].trangThai)){
+                let element3 = document.getElementById(boBai[j].giaTri);
+                element3.className = "a";
+                boBai[j].trangThai = false;
+                cayDau = parseInt(cayDau)+1;
+                cayDau = cayDau.toString();
+                break;
+                }else{
+                continue;
+                }
+              }}}}else{
+
+
+                if(mangMoi[i][1]=='j'){
+                let temp = document.getElementById('input-text').value;
+                document.getElementById('input-text').value = "0j";
+                document.getElementById('btn1').click();
+                document.getElementById('input-text').value=temp;
+                document.getElementById('input-text3').value="";
+                let cayDau = mangMoi[i][0];
+            while(cayDau<=9 && cayDau!='0'){
+                for (let j = 0; j < boBai.length; j++){
+
+            if (boBai[j].giaTri[1] == cayDau.toString()){
+
+
+                console.log("Giá trị", cayDau, "được tìm thấy trong mảng boBai.");
+                if((boBai[j].trangThai)){
+                let element3 = document.getElementById(boBai[j].giaTri);
+                element3.className = "a";
+                boBai[j].trangThai = false;
+                cayDau = parseInt(cayDau)+1;
+                cayDau = cayDau.toString();
+                break;
+                }else{
+                continue;
+                }
+              }}}}else{
+
+                if(mangMoi[i][1]=='0'){
+                let temp = document.getElementById('input-text').value;
+                document.getElementById('input-text').value = "0";
+                document.getElementById('btn1').click();
+                document.getElementById('input-text').value=temp;
+                document.getElementById('input-text3').value="";
+                let cayDau = mangMoi[i][0];
+               while(cayDau<=9 && cayDau!='0'){
+                for (let j = 0; j < boBai.length; j++){
+
+                if (boBai[j].giaTri[1] == cayDau.toString()){
+
+
+                console.log("Giá trị", cayDau, "được tìm thấy trong mảng boBai.");
+                if((boBai[j].trangThai)){
+                let element3 = document.getElementById(boBai[j].giaTri);
+                element3.className = "a";
+                boBai[j].trangThai = false;
+                cayDau = parseInt(cayDau)+1;
+                cayDau = cayDau.toString();
+                break;
+                }else{
+                continue;
+                }
+              }}}}else{
+
+                document.getElementById('input-text3').value="";
+                let cayDau = mangMoi[i][0];
+                
+                while(cayDau<=mangMoi[i][1] && cayDau!='0'){
+                
+
+                  
+                  let temp = document.getElementById('input-text').value;
+                  document.getElementById("input-text").value=cayDau.toString();
+                  document.getElementById("btn1").click();
+                  document.getElementById('input-text').value=temp;
+                  cayDau = parseInt(cayDau)+1;
+                
+              }}
+              
+    }}}}}
+            
+    }
+    
+);
+//nhap bai cua minh
+let myForm4 = document.getElementById("myForm4");
+  
+  myForm4.addEventListener("submit", function(event) {
+    event.preventDefault(); // Ngăn chặn hành động mặc định của form khi được gửi đi
+  
+    let myInputValue4 = document.getElementById("input-text4").value;
+    document.getElementById('input-text4').value="";
+    
+        for(let j =0; j< myInputValue4.length; j++){
+            for (let i = 0; i < boBai.length; i++) {
+
+                if (boBai[i].giaTri[1] === myInputValue4[j]) {
+
+                console.log("Giá trị", myInputValue4, "được tìm thấy trong mảng boBai.");
+                if((boBai[i].trangThai)){
+                let element = document.getElementById(boBai[i].giaTri);
+                element.className = "baiCuaToi";
+                boBai[i].trangThai = false;
+                break;
+                }else{
+                continue;
+        }}}}});
+
+
+        //phim tat o nhap la bai le
+        document.addEventListener('keydown', function(event) {
+      if (event.ctrlKey &&  event.keyCode === 49) { // keyCode 49 là phím số 1 trên bàn phím
+    var inputText = document.querySelector('#input-text');
+    if (inputText) {
+      inputText.focus(); // đặt trạng thái focus vào ô input-text
+      event.preventDefault(); // ngăn chặn hành động mặc định của phím tắt
+    }
+
+    
+
+
+    
+  }
+});
+
+
+        //phim tat o nhap bai doi
+        document.addEventListener('keydown', function(event) {
+      if (event.ctrlKey &&  event.keyCode === 50) { // keyCode 49 là phím số 1 trên bàn phím
+    var inputText = document.querySelector('#input-text2');
+    if (inputText) {
+      inputText.focus(); // đặt trạng thái focus vào ô input-text
+      event.preventDefault(); // ngăn chặn hành động mặc định của phím tắt
+    }
+
+    
+
+
+    
+  }
+});
+
+
+        //phim tat o nhap la bai sanh
+        document.addEventListener('keydown', function(event) {
+      if (event.ctrlKey &&  event.keyCode === 51) { // keyCode 49 là phím số 1 trên bàn phím
+    var inputText = document.querySelector('#input-text3');
+    if (inputText) {
+      inputText.focus(); // đặt trạng thái focus vào ô input-text
+      event.preventDefault(); // ngăn chặn hành động mặc định của phím tắt
+    }
+
+    
+
+
+    
+  }
+});
+
+        //phim tat o nhap la bai cua minh
+        document.addEventListener('keydown', function(event) {
+      if (event.ctrlKey &&  event.keyCode === 52) { // keyCode 49 là phím số 1 trên bàn phím
+    var inputText = document.querySelector('#input-text4');
+    if (inputText) {
+      inputText.focus(); // đặt trạng thái focus vào ô input-text
+      event.preventDefault(); // ngăn chặn hành động mặc định của phím tắt
+    }
+
+    
+
+
+    
+  }
+});
+
+// Lấy tham chiếu đến button refresh
+const refreshBtn = document.getElementById("refreshBtn");
+
+  // Thêm event listener cho window
+  window.addEventListener("keydown", function(event) {
+  // Kiểm tra xem người dùng đã nhấn phím ctrl và r cùng lúc hay không
+    if (event.ctrlKey && event.key === "r") {
+    // Gọi hàm click() của button refresh
+     refreshBtn.click();
+    }
+    }
+    );
+
+  </script>
+  
+</body>
+</html>
